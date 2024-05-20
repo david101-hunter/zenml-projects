@@ -18,6 +18,7 @@ from steps.index_generator import index_generator
 from steps.url_scraper import url_scraper
 from steps.web_url_loader import web_url_loader
 from zenml import pipeline
+# from steps.deploy_model import deploy_model
 
 
 @pipeline
@@ -34,3 +35,8 @@ def zenml_agent_creation_pipeline():
     documents = web_url_loader(urls)
     vector_store = index_generator(documents)
     _ = agent_creator(vector_store=vector_store)
+
+
+
+    # return agent
+

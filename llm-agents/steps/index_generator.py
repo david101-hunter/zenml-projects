@@ -15,7 +15,8 @@
 from typing import List
 
 from langchain.docstore.document import Document
-from langchain.embeddings import OpenAIEmbeddings
+# from langchain.embeddings import OpenAIEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings
 from langchain.schema.vectorstore import VectorStore
 from langchain.text_splitter import (
     CharacterTextSplitter,
@@ -29,7 +30,7 @@ from zenml import log_artifact_metadata, step
 def index_generator(
     documents: List[Document],
 ) -> Annotated[VectorStore, "vector_store"]:
-    embeddings = OpenAIEmbeddings()
+    embeddings = OllamaEmbeddings(base_url="http://localhost:11434", model="gemma:2b")
 
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     compiled_texts = text_splitter.split_documents(documents)
@@ -37,7 +38,7 @@ def index_generator(
     log_artifact_metadata(
         artifact_name="vector_store",
         metadata={
-            "embedding_type": "OpenAIEmbeddings",
+            "embedding_type": "OllamaEmbeddings",
             "vector_store_type": "FAISS",
         },
     )

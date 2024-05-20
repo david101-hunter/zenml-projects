@@ -1,0 +1,336 @@
+/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/langchain/chat_models/__init__.py:31: LangChainDeprecationWarning: Importing chat models from langchain is deprecated. Importing from langchain will no longer be supported as of langchain==0.2.0. Please import from langchain-community instead:
+
+`from langchain_community.chat_models import ChatOpenAI`.
+
+To install langchain-community run `pip install -U langchain-community`.
+  warnings.warn(
+/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/langchain/_api/module_import.py:120: LangChainDeprecationWarning: Importing CohereEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
+
+>> from langchain.embeddings import CohereEmbeddings
+
+with new imports of:
+
+>> from langchain_community.embeddings import CohereEmbeddings
+
+  warn_deprecated(
+/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/langchain/_api/module_import.py:120: LangChainDeprecationWarning: Importing FAISS from langchain.vectorstores is deprecated. Please replace deprecated imports:
+
+>> from langchain.vectorstores import FAISS
+
+with new imports of:
+
+>> from langchain_community.vectorstores import FAISS
+
+  warn_deprecated(
+/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/langchain/_api/module_import.py:120: LangChainDeprecationWarning: Importing UnstructuredURLLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
+
+>> from langchain.document_loaders import UnstructuredURLLoader
+
+with new imports of:
+
+>> from langchain_community.document_loaders import UnstructuredURLLoader
+
+  warn_deprecated(
+[1;35mRunning pipeline with config: agent_config.yaml[0m
+[1;35mInitiating a new run for the pipeline: [0m[1;36mzenml_agent_creation_pipeline[1;35m.[0m
+[1;35mReusing registered pipeline version: [0m[1;36m(version: 3)[1;35m.[0m
+[1;35mNew model version [0m[1;36m14[1;35m was created.[0m
+[1;35mModels can be viewed in the dashboard using ZenML Cloud. Sign up for a free trial at https://www.zenml.io/cloud/[0m
+[1;35mExecuting a new run.[0m
+[1;35mUsing user: [0m[1;36madmin[1;35m[0m
+[1;35mUsing stack: [0m[1;36mdefault[1;35m[0m
+[1;35m  artifact_store: [0m[1;36mdefault[1;35m[0m
+[1;35m  orchestrator: [0m[1;36mdefault[1;35m[0m
+[1;35mDashboard URL: http://localhost:8080/workspaces/default/pipelines/df01067d-49e1-43c7-83e6-640e0a722d05/runs/abad422f-532d-4e87-8298-51068fce3f26/dag[0m
+[1;35mCaching [0m[1;36mdisabled[1;35m explicitly for [0m[1;36murl_scraper[1;35m.[0m
+[1;35mStep [0m[1;36murl_scraper[1;35m has started.[0m
+[1;35mStep [0m[1;36murl_scraper[1;35m has finished in [0m[1;36m0.784s[1;35m.[0m
+[1;35mStep [0m[1;36mweb_url_loader[1;35m has started.[0m
+[1;35mReading document from string ...[0m
+[1;35mReading document ...[0m
+[1;35mImplicitly linking artifact [0m[1;36moutput[1;35m to model [0m[1;36mzenml_agent[1;35m version [0m[1;36m14[1;35m.[0m
+[1;35mStep [0m[1;36mweb_url_loader[1;35m has finished in [0m[1;36m10.697s[1;35m.[0m
+[1;35mStep [0m[1;36mindex_generator[1;35m has started.[0m
+/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/langchain_core/_api/deprecation.py:119: LangChainDeprecationWarning: The class `CohereEmbeddings` was deprecated in LangChain 0.0.30 and will be removed in 0.3.0. An updated version of the class exists in the langchain-cohere package and should be used instead. To use it run `pip install -U langchain-cohere` and import as `from langchain_cohere import CohereEmbeddings`.
+  warn_deprecated(
+[1;35mLoading faiss with AVX2 support.[0m
+[1;35mSuccessfully loaded faiss with AVX2 support.[0m
+[33mNo materializer is registered for type [0m[1;36m<class 'langchain_community.vectorstores.faiss.FAISS'>[33m, so the default Pickle materializer was used. Pickle is not production ready and should only be used for prototyping as the artifacts cannot be loaded when running with a different Python version. Please consider implementing a custom materializer for type [0m[1;36m<class 'langchain_community.vectorstores.faiss.FAISS'>[33m according to the instructions at https://docs.zenml.io/user-guide/advanced-guide/artifact-management/handle-custom-data-types[0m
+[31mFailed to run step [0m[1;36mindex_generator[31m.[0m
+[31mcannot pickle '_thread.RLock' object[0m
+Traceback (most recent call last):
+  File "/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orchestrators/step_launcher.py", line 230, in launch
+    self._run_step(
+  File "/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orchestrators/step_launcher.py", line 442, in _run_step
+    self._run_step_without_step_operator(
+  File "/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orchestrators/step_launcher.py", line 517, in _run_step_without_step_operator
+    runner.run(
+  File "/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orchestrators/step_runner.py", line 250, in run
+    output_artifact_ids = self._store_output_artifacts(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orchestrators/step_runner.py", line 624, in _store_output_artifacts
+    artifact = save_artifact(
+               ^^^^^^^^^^^^^^
+  File "/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/artifacts/utils.py", line 183, in save_artifact
+    materializer_object.save(data)
+  File "/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/materializers/cloudpickle_materializer.py", line 114, in save
+    cloudpickle.dump(data, fid)
+  File "/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/cloudpickle/cloudpickle_fast.py", line 57, in dump
+    ).dump(obj)
+      ^^^^^^^^^
+  File "/media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/cloudpickle/cloudpickle_fast.py", line 602, in dump
+    return Pickler.dump(self, obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot pickle '_thread.RLock' object
+[31mPipeline run [0m[1;36mzenml_agent_creation_pipeline-2024_05_14-01_06_59_775139[31m failed.[0m
+╭─────────────────────────────── Traceback (most recent call last) ────────────────────────────────╮
+│ /media/manhdt4/C69EA17C9EA166211/zenml/zenml-projects/llm-agents/run.py:62 in <module>           │
+│                                                                                                  │
+│   59                                                                                             │
+│   60                                                                                             │
+│   61 if __name__ == "__main__":                                                                  │
+│ ❱ 62 │   main()                                                                                  │
+│   63                                                                                             │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/click/core.p │
+│ y:1130 in __call__                                                                               │
+│                                                                                                  │
+│   1127 │                                                                                         │
+│   1128 │   def __call__(self, *args: t.Any, **kwargs: t.Any) -> t.Any:                           │
+│   1129 │   │   """Alias for :meth:`main`."""                                                     │
+│ ❱ 1130 │   │   return self.main(*args, **kwargs)                                                 │
+│   1131                                                                                           │
+│   1132                                                                                           │
+│   1133 class Command(BaseCommand):                                                               │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/click/core.p │
+│ y:1055 in main                                                                                   │
+│                                                                                                  │
+│   1052 │   │   try:                                                                              │
+│   1053 │   │   │   try:                                                                          │
+│   1054 │   │   │   │   with self.make_context(prog_name, args, **extra) as ctx:                  │
+│ ❱ 1055 │   │   │   │   │   rv = self.invoke(ctx)                                                 │
+│   1056 │   │   │   │   │   if not standalone_mode:                                               │
+│   1057 │   │   │   │   │   │   return rv                                                         │
+│   1058 │   │   │   │   │   # it's not safe to `ctx.exit(rv)` here!                               │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/click/core.p │
+│ y:1404 in invoke                                                                                 │
+│                                                                                                  │
+│   1401 │   │   │   echo(style(message, fg="red"), err=True)                                      │
+│   1402 │   │                                                                                     │
+│   1403 │   │   if self.callback is not None:                                                     │
+│ ❱ 1404 │   │   │   return ctx.invoke(self.callback, **ctx.params)                                │
+│   1405 │                                                                                         │
+│   1406 │   def shell_complete(self, ctx: Context, incomplete: str) -> t.List["CompletionItem"]:  │
+│   1407 │   │   """Return a list of completions for the incomplete value. Looks                   │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/click/core.p │
+│ y:760 in invoke                                                                                  │
+│                                                                                                  │
+│    757 │   │                                                                                     │
+│    758 │   │   with augment_usage_errors(__self):                                                │
+│    759 │   │   │   with ctx:                                                                     │
+│ ❱  760 │   │   │   │   return __callback(*args, **kwargs)                                        │
+│    761 │                                                                                         │
+│    762 │   def forward(                                                                          │
+│    763 │   │   __self, __cmd: "Command", *args: t.Any, **kwargs: t.Any  # noqa: B902             │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/zenml/zenml-projects/llm-agents/run.py:58 in main               │
+│                                                                                                  │
+│   55 │   if config:                                                                              │
+│   56 │   │   pipeline_args["config_path"] = os.path.join(config_folder, config)                  │
+│   57 │                                                                                           │
+│ ❱ 58 │   zenml_agent_creation_pipeline.with_options(**pipeline_args)()                           │
+│   59                                                                                             │
+│   60                                                                                             │
+│   61 if __name__ == "__main__":                                                                  │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/new/pi │
+│ pelines/pipeline.py:1397 in __call__                                                             │
+│                                                                                                  │
+│   1394 │   │   │   return self.entrypoint(*args, **kwargs)                                       │
+│   1395 │   │                                                                                     │
+│   1396 │   │   self.prepare(*args, **kwargs)                                                     │
+│ ❱ 1397 │   │   return self._run(**self._run_args)                                                │
+│   1398 │                                                                                         │
+│   1399 │   def _call_entrypoint(self, *args: Any, **kwargs: Any) -> None:                        │
+│   1400 │   │   """Calls the pipeline entrypoint function with the given arguments.               │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/new/pi │
+│ pelines/pipeline.py:758 in _run                                                                  │
+│                                                                                                  │
+│    755 │   │   │   │   │   │   "`zenml up`."                                                     │
+│    756 │   │   │   │   │   )                                                                     │
+│    757 │   │   │                                                                                 │
+│ ❱  758 │   │   │   deploy_pipeline(                                                              │
+│    759 │   │   │   │   deployment=deployment_model, stack=stack, placeholder_run=run             │
+│    760 │   │   │   )                                                                             │
+│    761 │   │   │   if run:                                                                       │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/new/pi │
+│ pelines/run_utils.py:148 in deploy_pipeline                                                      │
+│                                                                                                  │
+│   145 │   │   │   # placeholder run to stay in the database                                      │
+│   146 │   │   │   Client().delete_pipeline_run(placeholder_run.id)                               │
+│   147 │   │                                                                                      │
+│ ❱ 148 │   │   raise e                                                                            │
+│   149 │   finally:                                                                               │
+│   150 │   │   constants.SHOULD_PREVENT_PIPELINE_EXECUTION = previous_value                       │
+│   151                                                                                            │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/new/pi │
+│ pelines/run_utils.py:136 in deploy_pipeline                                                      │
+│                                                                                                  │
+│   133 │   previous_value = constants.SHOULD_PREVENT_PIPELINE_EXECUTION                           │
+│   134 │   constants.SHOULD_PREVENT_PIPELINE_EXECUTION = True                                     │
+│   135 │   try:                                                                                   │
+│ ❱ 136 │   │   stack.deploy_pipeline(deployment=deployment)                                       │
+│   137 │   except Exception as e:                                                                 │
+│   138 │   │   if (                                                                               │
+│   139 │   │   │   placeholder_run                                                                │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/stack/ │
+│ stack.py:853 in deploy_pipeline                                                                  │
+│                                                                                                  │
+│    850 │   │   Returns:                                                                          │
+│    851 │   │   │   The return value of the call to `orchestrator.run_pipeline(...)`.             │
+│    852 │   │   """                                                                               │
+│ ❱  853 │   │   return self.orchestrator.run(deployment=deployment, stack=self)                   │
+│    854 │                                                                                         │
+│    855 │   def _get_active_components_for_step(                                                  │
+│    856 │   │   self, step_config: "StepConfiguration"                                            │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orches │
+│ trators/base_orchestrator.py:175 in run                                                          │
+│                                                                                                  │
+│   172 │   │   environment = get_config_environment_vars(deployment=deployment)                   │
+│   173 │   │                                                                                      │
+│   174 │   │   try:                                                                               │
+│ ❱ 175 │   │   │   result = self.prepare_or_run_pipeline(                                         │
+│   176 │   │   │   │   deployment=deployment, stack=stack, environment=environment                │
+│   177 │   │   │   )                                                                              │
+│   178 │   │   finally:                                                                           │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orches │
+│ trators/local/local_orchestrator.py:78 in prepare_or_run_pipeline                                │
+│                                                                                                  │
+│    75 │   │   │   │   │   step_name,                                                             │
+│    76 │   │   │   │   )                                                                          │
+│    77 │   │   │                                                                                  │
+│ ❱  78 │   │   │   self.run_step(                                                                 │
+│    79 │   │   │   │   step=step,                                                                 │
+│    80 │   │   │   )                                                                              │
+│    81                                                                                            │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orches │
+│ trators/base_orchestrator.py:195 in run_step                                                     │
+│                                                                                                  │
+│   192 │   │   │   step=step,                                                                     │
+│   193 │   │   │   orchestrator_run_id=self.get_orchestrator_run_id(),                            │
+│   194 │   │   )                                                                                  │
+│ ❱ 195 │   │   launcher.launch()                                                                  │
+│   196 │                                                                                          │
+│   197 │   @staticmethod                                                                          │
+│   198 │   def requires_resources_in_orchestration_environment(                                   │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orches │
+│ trators/step_launcher.py:230 in launch                                                           │
+│                                                                                                  │
+│   227 │   │   │   │   logger.info(f"Step `{self._step_name}` has started.")                      │
+│   228 │   │   │   │   if execution_needed:                                                       │
+│   229 │   │   │   │   │   try:                                                                   │
+│ ❱ 230 │   │   │   │   │   │   self._run_step(                                                    │
+│   231 │   │   │   │   │   │   │   pipeline_run=pipeline_run,                                     │
+│   232 │   │   │   │   │   │   │   step_run=step_run_response,                                    │
+│   233 │   │   │   │   │   │   )                                                                  │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orches │
+│ trators/step_launcher.py:442 in _run_step                                                        │
+│                                                                                                  │
+│   439 │   │   │   │   │   step_run_info=step_run_info,                                           │
+│   440 │   │   │   │   )                                                                          │
+│   441 │   │   │   else:                                                                          │
+│ ❱ 442 │   │   │   │   self._run_step_without_step_operator(                                      │
+│   443 │   │   │   │   │   pipeline_run=pipeline_run,                                             │
+│   444 │   │   │   │   │   step_run=step_run,                                                     │
+│   445 │   │   │   │   │   step_run_info=step_run_info,                                           │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orches │
+│ trators/step_launcher.py:517 in _run_step_without_step_operator                                  │
+│                                                                                                  │
+│   514 │   │   │   output_artifact_uris: The output artifact URIs of the current step.            │
+│   515 │   │   """                                                                                │
+│   516 │   │   runner = StepRunner(step=self._step, stack=self._stack)                            │
+│ ❱ 517 │   │   runner.run(                                                                        │
+│   518 │   │   │   pipeline_run=pipeline_run,                                                     │
+│   519 │   │   │   step_run=step_run,                                                             │
+│   520 │   │   │   input_artifacts=input_artifacts,                                               │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orches │
+│ trators/step_runner.py:250 in run                                                                │
+│                                                                                                  │
+│   247 │   │   │   │   │   │   │   is_enabled_on_step=step_run_info.config.enable_artifact_visu   │
+│   248 │   │   │   │   │   │   │   is_enabled_on_pipeline=step_run_info.pipeline.enable_artifac   │
+│   249 │   │   │   │   │   │   )                                                                  │
+│ ❱ 250 │   │   │   │   │   │   output_artifact_ids = self._store_output_artifacts(                │
+│   251 │   │   │   │   │   │   │   output_data=output_data,                                       │
+│   252 │   │   │   │   │   │   │   output_artifact_uris=output_artifact_uris,                     │
+│   253 │   │   │   │   │   │   │   output_materializers=output_materializers,                     │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/orches │
+│ trators/step_runner.py:624 in _store_output_artifacts                                            │
+│                                                                                                  │
+│   621 │   │   │   # Get full set of tags                                                         │
+│   622 │   │   │   tags = step_context.get_output_tags(output_name)                               │
+│   623 │   │   │                                                                                  │
+│ ❱ 624 │   │   │   artifact = save_artifact(                                                      │
+│   625 │   │   │   │   name=artifact_name,                                                        │
+│   626 │   │   │   │   data=return_value,                                                         │
+│   627 │   │   │   │   materializer=materializer_class,                                           │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/artifa │
+│ cts/utils.py:183 in save_artifact                                                                │
+│                                                                                                  │
+│   180 │   # Save the artifact to the artifact store                                              │
+│   181 │   data_type = type(data)                                                                 │
+│   182 │   materializer_object.validate_type_compatibility(data_type)                             │
+│ ❱ 183 │   materializer_object.save(data)                                                         │
+│   184 │                                                                                          │
+│   185 │   # Save visualizations of the artifact                                                  │
+│   186 │   visualizations: List[ArtifactVisualizationRequest] = []                                │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/zenml/materi │
+│ alizers/cloudpickle_materializer.py:114 in save                                                  │
+│                                                                                                  │
+│   111 │   │   # save data                                                                        │
+│   112 │   │   filepath = os.path.join(self.uri, DEFAULT_FILENAME)                                │
+│   113 │   │   with self.artifact_store.open(filepath, "wb") as fid:                              │
+│ ❱ 114 │   │   │   cloudpickle.dump(data, fid)                                                    │
+│   115 │                                                                                          │
+│   116 │   def _save_python_version(self) -> None:                                                │
+│   117 │   │   """Saves the Python version used to materialize the artifact."""                   │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/cloudpickle/ │
+│ cloudpickle_fast.py:57 in dump                                                                   │
+│                                                                                                  │
+│    54 │   │   """                                                                                │
+│    55 │   │   CloudPickler(                                                                      │
+│    56 │   │   │   file, protocol=protocol, buffer_callback=buffer_callback                       │
+│ ❱  57 │   │   ).dump(obj)                                                                        │
+│    58 │                                                                                          │
+│    59 │   def dumps(obj, protocol=None, buffer_callback=None):                                   │
+│    60 │   │   """Serialize obj as a string of bytes allocated in memory                          │
+│                                                                                                  │
+│ /media/manhdt4/C69EA17C9EA166211/miniconda3/envs/zenml/lib/python3.11/site-packages/cloudpickle/ │
+│ cloudpickle_fast.py:602 in dump                                                                  │
+│                                                                                                  │
+│   599 │                                                                                          │
+│   600 │   def dump(self, obj):                                                                   │
+│   601 │   │   try:                                                                               │
+│ ❱ 602 │   │   │   return Pickler.dump(self, obj)                                                 │
+│   603 │   │   except RuntimeError as e:                                                          │
+│   604 │   │   │   if "recursion" in e.args[0]:                                                   │
+│   605 │   │   │   │   msg = (                                                                    │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+TypeError: cannot pickle '_thread.RLock' object

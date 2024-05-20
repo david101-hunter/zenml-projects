@@ -1,0 +1,3 @@
+from steps.deploy_model import prediction_service_loader
+
+prediction_service_loader()

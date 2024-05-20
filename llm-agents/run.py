@@ -50,10 +50,13 @@ def main(
         "configs",
     )
     pipeline_args = {}
+    logger.info(f"Running pipeline with config: {config}")
+    
     if config:
         pipeline_args["config_path"] = os.path.join(config_folder, config)
 
     zenml_agent_creation_pipeline.with_options(**pipeline_args)()
+ 
 
 
 if __name__ == "__main__":
